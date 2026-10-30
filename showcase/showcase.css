@@ -40,8 +40,22 @@ p + .ramp, p + .grid, p + .status-row { margin-top: var(--vp-space-4); }
 
 .logo-card { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: var(--vp-space-4); min-height: 190px; text-align: center; }
 .logo-card figcaption { font-size: var(--vp-text-sm); color: var(--vp-text-secondary); }
-.wordmark { display: flex; align-items: center; gap: var(--vp-space-3); font-size: var(--vp-text-2xl); font-weight: var(--vp-weight-semibold); letter-spacing: -0.03em; }
-.mono { color: var(--vp-text-primary); }
+.brand img { height: 30px; width: auto; }
+.wordmark-card { display: flex; align-items: center; justify-content: center; padding: var(--vp-space-10) var(--vp-space-4); margin-bottom: var(--vp-space-3); }
+.wordmark-card img { width: min(100%, 320px); height: auto; }
+.inline-logo { display: inline-block; width: 96px; height: 96px; color: var(--vp-brand-mark); }
+.inline-logo.mono { color: var(--vp-text-primary); }
+.inline-logo svg { display: block; width: 100%; height: 100%; }
+.sizes { display: flex; align-items: center; gap: var(--vp-space-4); min-height: 96px; }
+
+/* Cada versão do logo aparece só no tema certo. */
+.on-dark { display: none; }
+:root[data-theme="dark"] .on-dark { display: inline-block; }
+:root[data-theme="dark"] .on-light { display: none; }
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .on-dark { display: inline-block; }
+  :root:not([data-theme="light"]) .on-light { display: none; }
+}
 
 .ramp { display: grid; gap: var(--vp-space-2); grid-template-columns: repeat(auto-fit, minmax(84px, 1fr)); }
 .swatch { border: 1px solid var(--vp-border); border-radius: var(--vp-radius-md); overflow: hidden; background: var(--vp-surface-1); }

@@ -114,6 +114,9 @@
   --vp-text-on-accent-subtle: var(--vp-gold-900);
   --vp-border-accent: var(--vp-gold-300);
   --vp-focus: var(--vp-gold-700);
+  --vp-brand-mark: var(--vp-neutral-900);
+  --vp-brand-coin: var(--vp-gold-600);
+  --vp-brand-coin-edge: var(--vp-gold-800);
   --vp-success-fill: var(--vp-green-600);
   --vp-on-success: var(--vp-neutral-0);
   --vp-success-bg: var(--vp-green-100);
@@ -160,6 +163,9 @@
     --vp-text-on-accent-subtle: var(--vp-gold-200);
     --vp-border-accent: var(--vp-gold-700);
     --vp-focus: var(--vp-gold-400);
+    --vp-brand-mark: var(--vp-neutral-100);
+    --vp-brand-coin: var(--vp-gold-500);
+    --vp-brand-coin-edge: var(--vp-gold-700);
     --vp-success-fill: var(--vp-green-400);
     --vp-on-success: var(--vp-neutral-900);
     --vp-success-bg: var(--vp-green-900);
@@ -206,6 +212,9 @@
   --vp-text-on-accent-subtle: var(--vp-gold-200);
   --vp-border-accent: var(--vp-gold-700);
   --vp-focus: var(--vp-gold-400);
+  --vp-brand-mark: var(--vp-neutral-100);
+  --vp-brand-coin: var(--vp-gold-500);
+  --vp-brand-coin-edge: var(--vp-gold-700);
   --vp-success-fill: var(--vp-green-400);
   --vp-on-success: var(--vp-neutral-900);
   --vp-success-bg: var(--vp-green-900);

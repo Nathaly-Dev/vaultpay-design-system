@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>VaultPay Design System</title>
-  <link rel="icon" href="../logo/vaultpay-mark.svg" type="image/svg+xml">
+  <link rel="icon" href="../logo/favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="../src/fonts.css">
   <link rel="stylesheet" href="../src/tokens.css">
   <link rel="stylesheet" href="showcase.css">
@@ -12,9 +12,9 @@
 <body>
   <header class="top">
     <div class="wrap top-inner">
-      <a class="brand" href="#">
-        <img src="../logo/vaultpay-mark.svg" width="32" height="32" alt="">
-        <span>vaultpay</span>
+      <a class="brand" href="#" aria-label="VaultPay design system">
+        <img class="on-light" src="../logo/vaultpay-wordmark-on-light.svg" alt="">
+        <img class="on-dark" src="../logo/vaultpay-wordmark-on-dark.svg" alt="">
         <span class="tag">design system</span>
       </a>
       <div class="theme" role="group" aria-label="Tema">
@@ -34,21 +34,31 @@
 
     <section>
       <h2>Marca</h2>
+      <p class="muted">O v é um cofre aberto e uma moeda de ouro cai dentro dele: guardar com segurança.</p>
+      <div class="card wordmark-card">
+        <img class="on-light" src="../logo/vaultpay-wordmark-on-light.svg" alt="VaultPay">
+        <img class="on-dark" src="../logo/vaultpay-wordmark-on-dark.svg" alt="VaultPay">
+      </div>
       <div class="grid brand-grid">
         <figure class="card logo-card">
-          <img src="../logo/vaultpay-mark.svg" width="96" height="96" alt="Símbolo da VaultPay: um V com um ponto em cima, como o disco de um cofre">
-          <figcaption>Símbolo, ouro sobre grafite</figcaption>
+          <img src="../logo/vaultpay-app-icon.svg" width="96" height="96" alt="Ícone de app da VaultPay">
+          <figcaption>Ícone de app</figcaption>
         </figure>
         <figure class="card logo-card">
-          <div class="wordmark"><img src="../logo/vaultpay-mark.svg" width="40" height="40" alt=""><span>vaultpay</span></div>
-          <figcaption>Símbolo com nome</figcaption>
+          <span class="inline-logo" data-inline-svg="../logo/vaultpay-mark.svg"></span>
+          <figcaption>Símbolo na página: o v segue a cor do texto e a moeda segue os tokens</figcaption>
         </figure>
         <figure class="card logo-card">
-          <svg class="mono" width="96" height="96" viewBox="0 0 32 32" role="img" aria-label="Símbolo em uma cor só">
-            <path d="M6 10 L16 27 L26 10" fill="none" stroke="currentColor" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"/>
-            <circle cx="16" cy="5.5" r="2.4" fill="currentColor"/>
-          </svg>
-          <figcaption>Uma cor só, usada direto na página (herda a cor do texto)</figcaption>
+          <span class="inline-logo mono" data-inline-svg="../logo/vaultpay-mark-mono.svg"></span>
+          <figcaption>Uma cor só</figcaption>
+        </figure>
+        <figure class="card logo-card">
+          <div class="sizes">
+            <img src="../logo/vaultpay-app-icon.svg" width="32" height="32" alt="">
+            <img src="../logo/favicon.svg" width="20" height="20" alt="">
+            <img src="../logo/favicon.svg" width="16" height="16" alt="">
+          </div>
+          <figcaption>Tamanhos pequenos: a moeda vira um ponto</figcaption>
         </figure>
       </div>
     </section>

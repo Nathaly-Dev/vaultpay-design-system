@@ -38,7 +38,20 @@ function savedTheme() {
   }
 }
 
+// Coloca o SVG do logo direto na página, para ele herdar a cor do texto e os tokens.
+async function inlineSvgs() {
+  for (const el of document.querySelectorAll("[data-inline-svg]")) {
+    try {
+      const response = await fetch(el.dataset.inlineSvg);
+      if (response.ok) el.innerHTML = await response.text();
+    } catch {
+      // Aberta como arquivo (file://), a página não consegue buscar o SVG; o resto funciona.
+    }
+  }
+}
+
 renderRamps();
+inlineSvgs();
 applyTheme(savedTheme());
 for (const button of document.querySelectorAll("[data-theme-choice]")) {
   button.addEventListener("click", () => applyTheme(button.dataset.themeChoice));
