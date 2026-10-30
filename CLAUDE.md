@@ -17,7 +17,7 @@ Complementa o `~/.claude/CLAUDE.md` global; em segurança vale o mais rígido. O
 - Todo valor visual vem de token. Nada de cor, tamanho ou fonte solto em componente.
 - Tema claro **e** escuro desenhados (escuro por camadas de elevação), respeitando `prefers-color-scheme`.
 - **Contraste medido por programa** (`npm run contrast`), mínimo AA (4,5:1 texto; 3:1 foco e borda de campo). Falhou = corrigir a cor, não afrouxar o teste.
-- Fontes e assets **auto-hospedados** (sem CDN que exponha o IP do visitante).
+- Fontes e assets **auto-hospedados** (sem CDN que exponha o IP do visitante). Fontes: **Manrope** (texto) e **IBM Plex Mono** (números e código), só alfabeto latino, em `fonts/` com licença OFL. Plex Mono só tem os pesos 400 e 500.
 - Poucas dependências; cada uma nova é decisão registrada. Hoje: zero.
 - Hairline em vez de sombra pesada; um único botão primário por tela; números com `tabular-nums`.
 - Dados fictícios sempre.

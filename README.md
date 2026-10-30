@@ -23,8 +23,11 @@ npm install github:Nathaly-Dev/vaultpay-design-system#v0.1.0
 ```
 
 ```css
+@import "@vaultpay/design-system/fonts.css";
 @import "@vaultpay/design-system/tokens.css";
 ```
+
+As fontes (Manrope e IBM Plex Mono, licença OFL) vêm junto e são auto-hospedadas: nada é carregado de CDN. Origem e licenças em [`fonts/README.md`](fonts/README.md).
 
 O tema segue o sistema (`prefers-color-scheme`). Para forçar: `<html data-theme="light">` ou `<html data-theme="dark">`.
 
