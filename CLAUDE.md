@@ -8,7 +8,10 @@ Complementa o `~/.claude/CLAUDE.md` global; em segurança vale o mais rígido. O
 - Uma etapa por vez, proposta aprovada antes de arquitetura ou lib nova. Cada etapa = um PR, com screenshots (claro e escuro, celular e PC) antes de dizer que está pronto.
 
 ## Marca
-- Cor característica: **Ouro** `#F5A623` sobre grafite quente `#14110D`. Logo: um "V" com um ponto em cima (disco de cofre).
+- Cor característica: **Ouro** `#F5A623` sobre grafite quente `#14110D`.
+- Símbolo: o "v" é um cofre aberto e uma **moeda de ouro inclinada cai dentro dele**. Na palavra, o símbolo é o primeiro "v" de "vaultpay" (resto em Manrope 700, convertido em contorno). O v segue a cor do texto (`--vp-brand-mark`); a moeda é sempre ouro (`--vp-brand-coin`). Em 20 px ou menos a moeda vira um ponto.
+- Logos são **gerados** por `scripts/build_logo.py` (Python + fontTools, só desenvolvimento). Nunca editar os SVGs à mão.
+- O "V com ponto acima" foi descartado: já existe em várias marcas.
 - **Não** usar o design system pessoal da Nathaly (roxo): a marca é da VaultPay.
 - A cor da marca **não vira cor de estado**. Aviso/erro/sucesso/info têm famílias próprias, e todo estado é **cor + ícone + rótulo** (nunca só cor).
 
@@ -17,7 +20,7 @@ Complementa o `~/.claude/CLAUDE.md` global; em segurança vale o mais rígido. O
 - Todo valor visual vem de token. Nada de cor, tamanho ou fonte solto em componente.
 - Tema claro **e** escuro desenhados (escuro por camadas de elevação), respeitando `prefers-color-scheme`.
 - **Contraste medido por programa** (`npm run contrast`), mínimo AA (4,5:1 texto; 3:1 foco e borda de campo). Falhou = corrigir a cor, não afrouxar o teste.
-- Fontes e assets **auto-hospedados** (sem CDN que exponha o IP do visitante).
+- Fontes e assets **auto-hospedados** (sem CDN que exponha o IP do visitante). Fontes: **Manrope** (texto) e **IBM Plex Mono** (números e código), só alfabeto latino, em `fonts/` com licença OFL. Plex Mono só tem os pesos 400 e 500.
 - Poucas dependências; cada uma nova é decisão registrada. Hoje: zero.
 - Hairline em vez de sombra pesada; um único botão primário por tela; números com `tabular-nums`.
 - Dados fictícios sempre.

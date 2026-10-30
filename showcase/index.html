@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>VaultPay Design System</title>
+  <link rel="icon" href="../logo/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../src/fonts.css">
+  <link rel="stylesheet" href="../src/tokens.css">
+  <link rel="stylesheet" href="showcase.css">
+</head>
+<body>
+  <header class="top">
+    <div class="wrap top-inner">
+      <a class="brand" href="#" aria-label="VaultPay design system">
+        <img class="on-light" src="../logo/vaultpay-wordmark-on-light.svg" alt="">
+        <img class="on-dark" src="../logo/vaultpay-wordmark-on-dark.svg" alt="">
+        <span class="tag">design system</span>
+      </a>
+      <div class="theme" role="group" aria-label="Tema">
+        <button type="button" data-theme-choice="light" aria-pressed="false">Claro</button>
+        <button type="button" data-theme-choice="dark" aria-pressed="false">Escuro</button>
+        <button type="button" data-theme-choice="system" aria-pressed="true">Sistema</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section class="hero">
+      <p class="eyebrow">Marca, cores e tipografia</p>
+      <h1>Um cofre que você abre com confiança.</h1>
+      <p class="lead">A base visual dos três produtos da VaultPay: Assist, Insights e Triage. A VaultPay é uma empresa fictícia.</p>
+    </section>
+
+    <section>
+      <h2>Marca</h2>
+      <p class="muted">O v é um cofre aberto e uma moeda de ouro cai dentro dele: guardar com segurança.</p>
+      <div class="card wordmark-card">
+        <img class="on-light" src="../logo/vaultpay-wordmark-on-light.svg" alt="VaultPay">
+        <img class="on-dark" src="../logo/vaultpay-wordmark-on-dark.svg" alt="VaultPay">
+      </div>
+      <div class="grid brand-grid">
+        <figure class="card logo-card">
+          <img src="../logo/vaultpay-app-icon.svg" width="96" height="96" alt="Ícone de app da VaultPay">
+          <figcaption>Ícone de app</figcaption>
+        </figure>
+        <figure class="card logo-card">
+          <span class="inline-logo" data-inline-svg="../logo/vaultpay-mark.svg"></span>
+          <figcaption>Símbolo na página: o v segue a cor do texto e a moeda segue os tokens</figcaption>
+        </figure>
+        <figure class="card logo-card">
+          <span class="inline-logo mono" data-inline-svg="../logo/vaultpay-mark-mono.svg"></span>
+          <figcaption>Uma cor só</figcaption>
+        </figure>
+        <figure class="card logo-card">
+          <div class="sizes">
+            <img src="../logo/vaultpay-app-icon.svg" width="32" height="32" alt="">
+            <img src="../logo/favicon.svg" width="20" height="20" alt="">
+            <img src="../logo/favicon.svg" width="16" height="16" alt="">
+          </div>
+          <figcaption>Tamanhos pequenos: a moeda vira um ponto</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section>
+      <h2>Ouro, a cor da marca</h2>
+      <p class="muted">Cor de identidade. Nunca indica estado: aviso, erro e sucesso têm famílias próprias.</p>
+      <div class="ramp" data-ramp="gold"></div>
+    </section>
+
+    <section>
+      <h2>Superfícies e texto</h2>
+      <div class="grid surfaces">
+        <div class="card s0"><strong>surface-0</strong><span>Fundo da página</span></div>
+        <div class="card s1"><strong>surface-1</strong><span>Cartões e áreas de conteúdo</span></div>
+        <div class="card s2"><strong>surface-2</strong><span>Áreas rebaixadas e campos</span></div>
+        <div class="card s3"><strong>surface-3</strong><span>Menus e janelas flutuantes</span></div>
+      </div>
+      <div class="card type-samples">
+        <p class="t-primary">Texto principal: o valor está na sua conta.</p>
+        <p class="t-secondary">Texto secundário: explicações e apoio.</p>
+        <p class="t-muted">Texto discreto: datas, legendas e metadados.</p>
+        <p class="t-accent">Texto de destaque na cor da marca</p>
+      </div>
+    </section>
+
+    <section>
+      <h2>Estados</h2>
+      <p class="muted">Todo estado é <strong>cor + ícone + rótulo</strong>, nunca só cor.</p>
+      <div class="status-row">
+        <span class="status success"><svg viewBox="0 0 16 16" aria-hidden="true"><circle cx="8" cy="8" r="6.5"/><path d="M5 8.2 7.2 10.4 11 6"/></svg>Sucesso</span>
+        <span class="status warning"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 2 14.5 13.5h-13z"/><path d="M8 6.5v3.2M8 11.6v.4"/></svg>Atenção</span>
+        <span class="status danger"><svg viewBox="0 0 16 16" aria-hidden="true"><circle cx="8" cy="8" r="6.5"/><path d="m5.6 5.6 4.8 4.8m0-4.8-4.8 4.8"/></svg>Erro</span>
+        <span class="status info"><svg viewBox="0 0 16 16" aria-hidden="true"><circle cx="8" cy="8" r="6.5"/><path d="M8 7.2v4M8 4.9v.4"/></svg>Informação</span>
+      </div>
+    </section>
+
+    <section>
+      <h2>Tipografia</h2>
+      <div class="card type-scale">
+        <p style="font-size:var(--vp-text-4xl);font-weight:var(--vp-weight-semibold);line-height:var(--vp-leading-tight)">Título grande, 4xl</p>
+        <p style="font-size:var(--vp-text-2xl);font-weight:var(--vp-weight-semibold);line-height:var(--vp-leading-tight)">Título de seção, 2xl</p>
+        <p style="font-size:var(--vp-text-lg);font-weight:var(--vp-weight-medium)">Subtítulo, lg</p>
+        <p style="font-size:var(--vp-text-md)">Texto de leitura, md. A linha de prosa fica em até 75 caracteres para cansar menos a vista.</p>
+        <p style="font-size:var(--vp-text-sm)" class="t-secondary">Texto de apoio, sm.</p>
+        <p class="mono">SELECT saldo FROM contas WHERE id = 42; -- 1.234,56</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="wrap foot">
+    <p class="muted">VaultPay Design System, versão <span id="version">0.1.0</span>. Empresa fictícia, para estudo e portfólio.</p>
+  </footer>
+
+  <script src="showcase.js"></script>
+</body>
+</html>

@@ -1,0 +1,4 @@
+# Só para gerar os logos (scripts/build_logo.py). Não faz parte do pacote.
+#   pip-compile --generate-hashes -o scripts/requirements-logo.txt scripts/requirements-logo.in
+fonttools
+brotli
