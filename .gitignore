@@ -1,0 +1,15 @@
+# Segredos e configuração local
+.env
+.env.*
+!.env.example
+
+# Node
+node_modules/
+dist/
+*.log
+
+# Sistema e editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

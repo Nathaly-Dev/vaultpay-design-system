@@ -1,0 +1,25 @@
+{
+  "name": "@vaultpay/design-system",
+  "version": "0.0.0",
+  "description": "Design system da VaultPay (empresa fictícia): tokens, marca e componentes compartilhados por Assist, Insights e Triage.",
+  "license": "MIT",
+  "type": "module",
+  "exports": {
+    "./tokens.css": "./src/tokens.css",
+    "./logo/*": "./logo/*"
+  },
+  "files": [
+    "src",
+    "logo"
+  ],
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "tokens:build": "node scripts/build-tokens.mjs",
+    "tokens:check": "node scripts/build-tokens.mjs --check",
+    "contrast": "node scripts/check-contrast.mjs",
+    "test": "node --test",
+    "check": "npm run tokens:check && npm run contrast && npm test"
+  }
+}
