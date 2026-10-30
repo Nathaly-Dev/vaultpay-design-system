@@ -28,6 +28,16 @@ npm install github:Nathaly-Dev/vaultpay-design-system#v0.1.0
 
 O tema segue o sistema (`prefers-color-scheme`). Para forçar: `<html data-theme="light">` ou `<html data-theme="dark">`.
 
+Logo: `logo/vaultpay-mark.svg` (ouro sobre grafite) pode ir em `<img>`. O `logo/vaultpay-mark-mono.svg` usa `currentColor`, então precisa ser colocado **direto na página** (SVG inline) para herdar a cor do texto; em `<img>` ele fica preto.
+
+## Vitrine
+
+Para ver a marca, as cores e a tipografia nos dois temas, sirva a pasta e abra `showcase/index.html`:
+
+```bash
+python -m http.server 4173
+```
+
 ## Como desenvolver
 
 ```bash
