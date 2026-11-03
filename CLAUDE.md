@@ -32,7 +32,9 @@ npm run check          # tokens em dia + contraste + testes
 ```
 
 ## Roadmap
-1. Fundação: tokens, marca, vitrine (em andamento)
+Estado atual e pendências: ver [`HANDOFF.md`](HANDOFF.md).
+
+1. Fundação: tokens, marca, vitrine (concluída)
 2. Peças básicas e de conversa (Assist)
 3. Dados (tabela, filtros, paginação, bloco de código)
 4. Painéis (cards de métrica, gráficos, estados vazio/carregando/erro), só quando Insights e Triage começarem
