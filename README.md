@@ -43,7 +43,10 @@ npm install github:Nathaly-Dev/vaultpay-design-system#v0.1.0
 ```css
 @import "@vaultpay/design-system/fonts.css";
 @import "@vaultpay/design-system/tokens.css";
+@import "@vaultpay/design-system/components.css";
 ```
+
+As peças (`components.css`) são classes CSS com o prefixo `vp-` (ex.: `vp-msg`, `vp-source`, `vp-composer`), sem depender de framework: React, HTML puro ou qualquer outro usa igual. O exemplo de cada uma está na vitrine.
 
 As fontes (Manrope e IBM Plex Mono, licença OFL) vêm junto e são auto-hospedadas: nada é carregado de CDN. Origem e licenças em [`fonts/README.md`](fonts/README.md).
 
@@ -76,7 +79,7 @@ A fonte da verdade é `tokens/tokens.json`; o `src/tokens.css` é gerado. O cont
 ## Roadmap
 
 - [ ] **1. Fundação:** tokens claro e escuro, marca, vitrine.
-- [ ] **2. Peças básicas e de conversa:** botão, campo, badge, card; balões, digitando, citação de fonte, "encaminhado para atendente".
+- [ ] **2. Peças básicas e de conversa:** feitas as de conversa (balões, fonte citada, encaminhado, erro, digitando, campo de mensagem, sugestão, navegação lateral) e o botão; faltam campo de formulário, badge e card.
 - [ ] **3. Dados:** tabela, filtros, paginação, bloco de código.
 - [ ] **4. Painéis:** cards de métrica, gráficos, estados vazio, carregando e erro.
 

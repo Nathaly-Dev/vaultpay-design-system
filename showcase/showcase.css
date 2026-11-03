@@ -82,3 +82,10 @@ p + .ramp, p + .grid, p + .status-row { margin-top: var(--vp-space-4); }
 
 .foot { padding-block: var(--vp-space-10) var(--vp-space-8); }
 .foot .muted { font-size: var(--vp-text-sm); }
+
+.chat-demo { display: grid; gap: var(--vp-space-4); grid-template-columns: minmax(0, 1fr) minmax(0, 16rem); align-items: start; }
+.chat-thread { display: flex; flex-direction: column; gap: var(--vp-space-4); background: var(--vp-surface-0); }
+.chat-side { display: grid; gap: var(--vp-space-3); }
+.chat-nav { display: grid; gap: var(--vp-space-1); padding: var(--vp-space-3); }
+.chat-nav .vp-btn { margin-bottom: var(--vp-space-2); }
+@media (max-width: 720px) { .chat-demo { grid-template-columns: minmax(0, 1fr); } }
