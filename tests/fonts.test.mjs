@@ -30,8 +30,12 @@ test("a primeira família de cada token de fonte tem @font-face", () => {
   }
 });
 
-test("as licenças das duas fontes acompanham os arquivos", () => {
-  for (const name of ["LICENSE-Manrope-OFL.txt", "LICENSE-IBMPlexMono-OFL.txt"]) {
+test("as licenças das fontes acompanham os arquivos", () => {
+  for (const name of [
+    "LICENSE-PlusJakartaSans-OFL.txt",
+    "LICENSE-Manrope-OFL.txt",
+    "LICENSE-IBMPlexMono-OFL.txt",
+  ]) {
     const text = readFileSync(`${FONTS_DIR}${name}`, "utf-8");
     assert.match(text, /SIL Open Font License/, name);
   }

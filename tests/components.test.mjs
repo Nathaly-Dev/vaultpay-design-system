@@ -42,3 +42,30 @@ test("encaminhamento usa a família de informação, nunca a cor da marca", () =
 test("o pacote publica as peças", () => {
   assert.equal(pkg.exports["./components.css"], "./src/components.css");
 });
+
+// Junta o corpo de todas as regras cujo seletor contém o texto pedido.
+const rulesFor = (selector) =>
+  [...code.matchAll(/([^{}]+)\{([^}]*)\}/g)]
+    .filter((m) => m[1].includes(selector))
+    .map((m) => m[2])
+    .join("");
+
+test("aviso de ocupado e erro usam as próprias famílias, nunca a cor da marca", () => {
+  for (const [variant, family] of [["warning", "warning"], ["error", "danger"]]) {
+    const rules = rulesFor(`.vp-msg--${variant}`);
+    assert.match(rules, new RegExp(`--vp-${family}-`), variant);
+    assert.doesNotMatch(rules, /--vp-(?:accent|gold|brand)/, variant);
+  }
+});
+
+test("balão do cliente usa o ouro suave, não o ouro cheio do botão de enviar", () => {
+  const rules = rulesFor(".vp-msg--user .vp-msg__bubble");
+  assert.match(rules, /--vp-accent-subtle/);
+  assert.doesNotMatch(rules, /background: var\(--vp-accent\)/);
+});
+
+test("o painel da marca só usa tokens da marca (igual nos dois temas)", () => {
+  const rules = rulesFor(".vp-brand-panel");
+  assert.match(rules, /--vp-brand-surface/);
+  assert.doesNotMatch(rules, /--vp-(?:surface|text)-/);
+});

@@ -48,7 +48,7 @@ npm install github:Nathaly-Dev/vaultpay-design-system#v0.1.0
 
 As peças (`components.css`) são classes CSS com o prefixo `vp-` (ex.: `vp-msg`, `vp-source`, `vp-composer`), sem depender de framework: React, HTML puro ou qualquer outro usa igual. O exemplo de cada uma está na vitrine.
 
-As fontes (Manrope e IBM Plex Mono, licença OFL) vêm junto e são auto-hospedadas: nada é carregado de CDN. Origem e licenças em [`fonts/README.md`](fonts/README.md).
+As fontes (Plus Jakarta Sans e IBM Plex Mono, licença OFL; a Manrope fica só para o gerador do logo) vêm junto e são auto-hospedadas: nada é carregado de CDN. Origem e licenças em [`fonts/README.md`](fonts/README.md).
 
 O tema segue o sistema (`prefers-color-scheme`). Para forçar: `<html data-theme="light">` ou `<html data-theme="dark">`.
 

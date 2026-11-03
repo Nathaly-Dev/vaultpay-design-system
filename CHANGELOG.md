@@ -2,6 +2,18 @@
 
 Versões seguem o [SemVer](https://semver.org/lang/pt-BR/). Os produtos (Assist, Insights, Triage) apontam para uma tag.
 
+## 0.2.0 (2026-11-03)
+
+Redesenho pedido pela Nathaly: mais cor no tema claro, menos linha e regras iguais nos dois temas.
+
+- Fonte da interface: **Plus Jakarta Sans** (a Manrope fica só para o gerador do logo). Novo peso `weight-bold` (700).
+- Tema claro em camadas: página bege (`surface-0`) e cartões brancos.
+- Painel da marca (`vp-brand-panel`, tokens `brand-*`): menu grafite nos dois temas, com o item ativo em ouro.
+- Mensagens sem borda e com texto maior; valores em negrito que não quebram; balão do cliente em ouro suave.
+- Fonte citada vira etiqueta que abre o trecho (`<details>`).
+- Novos: aviso de atenção (`vp-msg--warning`) com ação (`vp-msg__action`), `vp-note--warning`/`--danger`, `vp-chip`, `vp-segmented`, rótulo do digitando.
+- Contraste conferido nos dois temas (92 pares).
+
 ## 0.1.0 (2026-11-03)
 
 Primeira versão marcada.
