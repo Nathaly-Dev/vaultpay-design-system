@@ -101,11 +101,21 @@
       <h2>Conversa</h2>
       <p class="muted">Peças do Assist. A resposta sempre mostra a fonte; sem base, a conversa vai para uma pessoa.</p>
       <div class="chat-demo">
-        <div class="card chat-thread">
+        <div class="chat-side vp-brand-panel">
+          <button class="vp-btn" type="button"><svg class="vp-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg>Nova conversa</button>
+          <button class="vp-nav-item" type="button" aria-current="true"><svg class="vp-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M13 3 5 14h6l-1 7 8-11h-6z"/></svg>Pix</button>
+          <button class="vp-nav-item" type="button"><svg class="vp-icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="6" width="18" height="12" rx="2"/><path d="M3 10h18"/></svg>Cartão</button>
+          <button class="vp-nav-item" type="button"><svg class="vp-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 5 6v5c0 4.4 3 8.3 7 9.5 4-1.2 7-5.1 7-9.5V6z"/></svg>Segurança</button>
+          <div class="vp-segmented" role="group" aria-label="Tema (exemplo)">
+            <button type="button" aria-pressed="true">Claro</button><button type="button" aria-pressed="false">Escuro</button><button type="button" aria-pressed="false">Sistema</button>
+          </div>
+        </div>
+
+        <div class="chat-thread">
           <div class="vp-msg vp-msg--user">
             <div class="vp-msg__body">
               <div class="vp-msg__bubble"><p>Pix depois das 22h tem limite menor? Meu CPF é <span class="vp-pii">[CPF]</span></p></div>
-              <span class="vp-msg__meta"><span class="vp-note vp-note--success"><svg class="vp-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 5 6v5c0 4.4 3 8.3 7 9.5 4-1.2 7-5.1 7-9.5V6z"/><path d="m9 12 2 2 4-4"/></svg>CPF mascarado antes do modelo e do banco</span></span>
+              <span class="vp-msg__meta"><span class="vp-note vp-note--success"><svg class="vp-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 5 6v5c0 4.4 3 8.3 7 9.5 4-1.2 7-5.1 7-9.5V6z"/><path d="m9 12 2 2 4-4"/></svg>Seu CPF foi protegido</span></span>
             </div>
           </div>
 
@@ -113,18 +123,18 @@
             <span class="vp-msg__avatar" data-inline-svg="../logo/vaultpay-mark.svg" aria-hidden="true"></span>
             <div class="vp-msg__body">
               <div class="vp-msg__bubble">
-                <p>Sim. Entre 20h e 6h, o limite total de envio é R$ 1.000,00. Durante o dia, vale o limite de R$ 5.000,00.</p>
-                <div class="vp-source">
-                  <svg class="vp-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 3h7l5 5v13H7z"/><path d="M14 3v5h5M10 13h6M10 17h6"/></svg>
-                  <span><span class="vp-source__title">Política de Pix, Art. 2. Limites</span><span class="vp-source__quote">Entre 20h e 6h (período noturno), o limite total de envio é de R$ 1.000,00.</span></span>
-                </div>
+                <p>Sim. Entre 20h e 6h, o limite total de envio é de <strong>R$ 1.000,00</strong>. Durante o dia, vale o limite de <strong>R$ 5.000,00</strong>.</p>
+                <details class="vp-source">
+                  <summary class="vp-source__title"><svg class="vp-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 3h7l5 5v13H7z"/><path d="M14 3v5h5M10 13h6M10 17h6"/></svg>Política de Pix · Art. 2<svg class="vp-icon vp-source__chevron" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary>
+                  <p class="vp-source__quote">Entre 20h e 6h (período noturno), o limite total de envio é de R$ 1.000,00.</p>
+                </details>
               </div>
-              <span class="vp-msg__meta">Resposta em 4,7 s</span>
             </div>
           </div>
 
-          <div class="vp-msg vp-msg--user">
-            <div class="vp-msg__body"><div class="vp-msg__bubble"><p>Vocês têm app para smartwatch?</p></div></div>
+          <div class="vp-msg vp-msg--warning">
+            <span class="vp-msg__avatar"><svg class="vp-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span>
+            <div class="vp-msg__body"><div class="vp-msg__bubble"><span class="vp-msg__title">Atendente ocupado</span><p>Outra pergunta está sendo respondida. A sua continua aqui.</p><button class="vp-msg__action" type="button">Tentar de novo</button></div></div>
           </div>
 
           <div class="vp-msg vp-msg--handoff">
@@ -145,30 +155,20 @@
 
           <div class="vp-msg">
             <span class="vp-msg__avatar" data-inline-svg="../logo/vaultpay-mark.svg" aria-hidden="true"></span>
-            <div class="vp-typing" role="status"><span class="vp-typing__dot"></span><span class="vp-typing__dot"></span><span class="vp-typing__dot"></span><span class="vp-sr-only">Assist está digitando</span></div>
+            <div class="vp-typing" role="status"><span class="vp-typing__dot"></span><span class="vp-typing__dot"></span><span class="vp-typing__dot"></span><span class="vp-typing__label">Procurando nas políticas…</span></div>
+          </div>
+
+          <div class="chip-row" role="group" aria-label="Sugestões de pergunta (exemplo)">
+            <button class="vp-chip" type="button"><svg class="vp-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M15 6l5 5-5 5"/><path d="M20 11H9a5 5 0 0 0-5 5v2"/></svg>Mandei Pix errado</button>
+            <button class="vp-chip" type="button"><svg class="vp-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 5 6v5c0 4.4 3 8.3 7 9.5 4-1.2 7-5.1 7-9.5V6z"/></svg>Caí num golpe</button>
           </div>
 
           <form class="vp-composer" onsubmit="return false">
             <label class="vp-sr-only" for="demo-q">Sua pergunta</label>
-            <textarea id="demo-q" class="vp-composer__field" rows="1" maxlength="1000" placeholder="Pergunte sobre Pix, cartão, conta…"></textarea>
+            <textarea id="demo-q" class="vp-composer__field" rows="1" maxlength="1000" placeholder="Digite sua pergunta"></textarea>
             <span class="vp-composer__count">0/1000</span>
             <button class="vp-btn vp-btn--primary vp-btn--icon" type="submit" aria-label="Enviar"><svg class="vp-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 19V5M6 11l6-6 6 6"/></svg></button>
           </form>
-          <span class="vp-note"><svg class="vp-icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg>Nunca digite senha, PIN ou número do cartão.</span>
-        </div>
-
-        <div class="chat-side">
-          <div class="card chat-nav">
-            <button class="vp-btn" type="button"><svg class="vp-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg>Nova conversa</button>
-            <button class="vp-nav-item" type="button" aria-current="true"><svg class="vp-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M13 3 5 14h6l-1 7 8-11h-6z"/></svg>Pix</button>
-            <button class="vp-nav-item" type="button"><svg class="vp-icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="6" width="18" height="12" rx="2"/><path d="M3 10h18"/></svg>Cartão</button>
-            <button class="vp-nav-item" type="button"><svg class="vp-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 5 6v5c0 4.4 3 8.3 7 9.5 4-1.2 7-5.1 7-9.5V6z"/></svg>Segurança</button>
-          </div>
-          <button class="vp-suggestion" type="button">
-            <svg class="vp-icon vp-suggestion__icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="6" width="18" height="12" rx="2"/><path d="M3 10h18M7 15h3"/></svg>
-            <span class="vp-suggestion__title">Perdi meu cartão</span>
-            <span class="vp-suggestion__hint">Como bloqueio e peço outro?</span>
-          </button>
         </div>
       </div>
     </section>

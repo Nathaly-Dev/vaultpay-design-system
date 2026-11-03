@@ -25,6 +25,16 @@ export function contrastPairs() {
   }
   pairs.push(["on-accent", "accent", 4.5], ["on-accent", "accent-hover", 4.5]);
   pairs.push(["text-on-accent-subtle", "accent-subtle", 4.5]);
+  // Menu da marca (grafite nos dois temas).
+  pairs.push(
+    ["on-brand", "brand-surface", 4.5],
+    ["on-brand", "brand-surface-hover", 4.5],
+    ["on-brand-strong", "brand-surface", 4.5],
+    ["on-brand-strong", "brand-surface-hover", 4.5],
+    ["brand-active-text", "brand-active-bg", 4.5],
+    ["focus", "brand-surface", 3],
+    ["brand-border", "brand-surface", 3],
+  );
   for (const bg of ["surface-0", "surface-1"]) {
     pairs.push(["focus", bg, 3], ["border-input", bg, 3]);
   }
