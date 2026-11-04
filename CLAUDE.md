@@ -23,6 +23,7 @@ Complementa o `~/.claude/CLAUDE.md` global; em segurança vale o mais rígido. O
 - Fontes e assets **auto-hospedados** (sem CDN que exponha o IP do visitante). Fontes: **Plus Jakarta Sans** (texto, desde a v0.2.0) e **IBM Plex Mono** (código e identificadores; valores usam a fonte de texto com `tabular-nums`). A Manrope fica em `fonts/` só para o gerador do logo, só alfabeto latino, em `fonts/` com licença OFL. Plex Mono só tem os pesos 400 e 500.
 - Poucas dependências; cada uma nova é decisão registrada. Hoje: zero.
 - Hairline em vez de sombra pesada; um único botão primário por tela; números com `tabular-nums`.
+- **Qualquer tela:** só os tamanhos de tela dos tokens (`breakpoint-*`) nas regras `@media`, aqui e nos produtos. Conferir celular, tela baixa e PC antes de dizer que está pronto.
 - Dados fictícios sempre.
 
 ## Comandos
