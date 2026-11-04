@@ -87,6 +87,11 @@ test("a gaveta escurece o fundo com o token próprio e respeita quem pede menos 
   assert.match(code, /@media \(prefers-reduced-motion: reduce\) \{\s*\.vp-drawer\[open\] \{ animation: none; \}/);
 });
 
+test("botão de ícone tem o mesmo formato redondo do botão comum", () => {
+  assert.match(code, /\n\.vp-btn \{[^}]*border-radius: var\(--vp-radius-full\)/);
+  assert.doesNotMatch(rulesFor(".vp-btn--icon"), /border-radius/);
+});
+
 test("o painel da marca só usa tokens da marca (igual nos dois temas)", () => {
   const rules = rulesFor(".vp-brand-panel");
   assert.match(rules, /--vp-brand-surface/);

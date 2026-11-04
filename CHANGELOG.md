@@ -10,6 +10,7 @@ Qualquer tela, nos três produtos.
 - Cartão de sugestão compacto no celular e em tela baixa: uma linha (ícone + título); a pergunta sai da vista, mas continua para o leitor de tela.
 - Nova peça `vp-drawer`: gaveta do menu no celular, para `<dialog>`, com animação desligada para quem pede menos movimento.
 - Novos tokens `scrim` (fundo escurecido atrás da gaveta, por tema) e `drawer-width`.
+- Botão de ícone (`vp-btn--icon`) com o mesmo formato redondo do botão comum: botões lado a lado não têm mais cantos diferentes.
 - Vitrine: seção "Qualquer tela" com os cartões e a gaveta.
 
 ## 0.2.0 (2026-11-03)
