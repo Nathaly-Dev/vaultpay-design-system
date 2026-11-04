@@ -56,3 +56,9 @@ applyTheme(savedTheme());
 for (const button of document.querySelectorAll("[data-theme-choice]")) {
   button.addEventListener("click", () => applyTheme(button.dataset.themeChoice));
 }
+
+const drawer = document.getElementById("demo-drawer");
+document.querySelector("[data-open-drawer]").addEventListener("click", () => drawer.showModal());
+document.querySelector("[data-close-drawer]").addEventListener("click", () => drawer.close());
+// Toque fora da gaveta (no fundo escurecido) chega com o próprio <dialog> como alvo.
+drawer.addEventListener("click", (event) => event.target === drawer && drawer.close());

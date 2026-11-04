@@ -64,6 +64,29 @@ test("balão do cliente usa o ouro suave, não o ouro cheio do botão de enviar"
   assert.doesNotMatch(rules, /background: var\(--vp-accent\)/);
 });
 
+// Variável CSS não funciona dentro de @media, então a regra usa o valor escrito; este teste
+// garante que ele é sempre um dos tamanhos de tela combinados nos tokens.
+test("regras de tamanho de tela só usam os tamanhos combinados", () => {
+  const breakpoints = new Set(
+    [...tokensCss.matchAll(/--vp-breakpoint-[a-z]+:\s*([^;]+);/g)].map((m) => m[1].trim()),
+  );
+  const used = [...code.matchAll(/\((?:max|min)-(?:width|height):\s*([^)]+)\)/g)].map((m) => m[1].trim());
+  assert.ok(used.length > 0);
+  assert.deepEqual(used.filter((value) => !breakpoints.has(value)), []);
+});
+
+test("cartão de sugestão vira uma linha no celular e em tela baixa, sem perder a pergunta", () => {
+  assert.match(code, /@media \(max-width: 30rem\), \(max-height: 40rem\) \{\s*\.vp-suggestion \{[^}]*grid-auto-flow: column/);
+  // Escondida só da vista (como vp-sr-only), nunca com display: none, que a tiraria do leitor de tela.
+  assert.doesNotMatch(rulesFor(".vp-suggestion__hint"), /display:\s*none/);
+  assert.match(rulesFor(".vp-suggestion__hint"), /clip: rect\(0 0 0 0\)/);
+});
+
+test("a gaveta escurece o fundo com o token próprio e respeita quem pede menos movimento", () => {
+  assert.match(rulesFor(".vp-drawer::backdrop"), /background: var\(--vp-scrim\)/);
+  assert.match(code, /@media \(prefers-reduced-motion: reduce\) \{\s*\.vp-drawer\[open\] \{ animation: none; \}/);
+});
+
 test("o painel da marca só usa tokens da marca (igual nos dois temas)", () => {
   const rules = rulesFor(".vp-brand-panel");
   assert.match(rules, /--vp-brand-surface/);
