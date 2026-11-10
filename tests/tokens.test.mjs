@@ -63,14 +63,13 @@ test("src/tokens.css está em dia com tokens.json", () => {
   assert.equal(normalize(readFileSync(CSS_PATH, "utf-8")), normalize(buildCss(tokens)));
 });
 
-test("o CSS gerado cobre tema claro, escuro automático e escuro forçado", () => {
+test("o CSS gerado abre claro e só fica escuro quando a pessoa escolhe", () => {
   const css = buildCss(tokens);
 
-  assert.match(css, /:root\[data-theme="light"\]/);
-  assert.match(css, /@media \(prefers-color-scheme: dark\)/);
-  assert.match(css, /:root:not\(\[data-theme="light"\]\)/);
-  assert.match(css, /:root\[data-theme="dark"\]/);
-  assert.match(css, /color-scheme: dark;/);
+  assert.match(css, /:root,\r?\n:root\[data-theme="light"\] \{\r?\n  color-scheme: light;/);
+  assert.match(css, /:root\[data-theme="dark"\] \{\r?\n  color-scheme: dark;/);
+  // Claro como padrão sempre: nada segue o tema do sistema.
+  assert.doesNotMatch(css, /prefers-color-scheme/);
 });
 
 test("o CSS gerado não tem cor solta nos temas: só referências às cores base", () => {

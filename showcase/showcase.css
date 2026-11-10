@@ -52,10 +52,6 @@ p + .ramp, p + .grid, p + .status-row { margin-top: var(--vp-space-4); }
 .on-dark { display: none; }
 :root[data-theme="dark"] .on-dark { display: inline-block; }
 :root[data-theme="dark"] .on-light { display: none; }
-@media (prefers-color-scheme: dark) {
-  :root:not([data-theme="light"]) .on-dark { display: inline-block; }
-  :root:not([data-theme="light"]) .on-light { display: none; }
-}
 
 .ramp { display: grid; gap: var(--vp-space-2); grid-template-columns: repeat(auto-fit, minmax(84px, 1fr)); }
 .swatch { border: 1px solid var(--vp-border); border-radius: var(--vp-radius-md); overflow: hidden; background: var(--vp-surface-1); }

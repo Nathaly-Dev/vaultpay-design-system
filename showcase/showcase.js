@@ -18,8 +18,7 @@ function renderRamps() {
 
 function applyTheme(choice) {
   const root = document.documentElement;
-  if (choice === "system") root.removeAttribute("data-theme");
-  else root.setAttribute("data-theme", choice);
+  root.setAttribute("data-theme", choice);
   for (const button of document.querySelectorAll("[data-theme-choice]")) {
     button.setAttribute("aria-pressed", String(button.dataset.themeChoice === choice));
   }
@@ -32,9 +31,10 @@ function applyTheme(choice) {
 
 function savedTheme() {
   try {
-    return localStorage.getItem("vp-theme") || "system";
+    // Claro como padrão sempre; "system" ficou de versões antigas e vira claro.
+    return localStorage.getItem("vp-theme") === "dark" ? "dark" : "light";
   } catch {
-    return "system";
+    return "light";
   }
 }
 

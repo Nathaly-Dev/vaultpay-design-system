@@ -2,6 +2,15 @@
 
 Versões seguem o [SemVer](https://semver.org/lang/pt-BR/). Os produtos (Assist, Insights, Triage) apontam para uma tag.
 
+## 0.4.0 (2026-11-10)
+
+Claro como padrão sempre.
+
+- O tema **não segue mais** o `prefers-color-scheme`: abre claro mesmo com o sistema no escuro. O escuro só aparece com `data-theme="dark"`, quando a pessoa escolhe. Teste garante que o CSS gerado não tem `prefers-color-scheme`.
+- Vitrine sem a opção "Sistema" (Claro e Escuro); escolha antiga "Sistema" vira Claro.
+- Regras novas no `CLAUDE.md`: claro como padrão, uma seção por tela, qualquer aparelho sem perder o que importa, sem repetição por tela.
+- `HANDOFF.md` atualizado (substitui o do PR #2, que estava na v0.1.0).
+
 ## 0.3.0 (2026-11-04)
 
 Qualquer tela, nos três produtos.
