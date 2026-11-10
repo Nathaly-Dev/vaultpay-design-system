@@ -52,7 +52,7 @@ As fontes (Plus Jakarta Sans e IBM Plex Mono, licença OFL; a Manrope fica só p
 
 **Qualquer tela:** os três produtos usam os mesmos tamanhos de tela, definidos nos tokens: celular até `30rem`, tablet até `48rem` e tela baixa até `40rem` de altura (celular deitado, notebook pequeno). Variável CSS não funciona dentro de `@media`, então o produto escreve o valor (`@media (max-width: 48rem)`) e um teste confere que é um dos combinados. As peças já se ajustam sozinhas (ex.: o cartão de sugestão vira uma linha); no celular, o menu vai para uma gaveta (`vp-drawer`, num `<dialog>`).
 
-O tema segue o sistema (`prefers-color-scheme`). Para forçar: `<html data-theme="light">` ou `<html data-theme="dark">`.
+**Claro como padrão sempre:** abre claro mesmo com o sistema no escuro. O escuro só aparece quando a pessoa escolhe: `<html data-theme="dark">` (o produto oferece um botão Claro/Escuro e lembra a escolha).
 
 ## Vitrine
 

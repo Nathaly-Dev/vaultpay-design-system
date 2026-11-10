@@ -18,12 +18,15 @@ Complementa o `~/.claude/CLAUDE.md` global; em segurança vale o mais rígido. O
 ## Regras
 - **Fonte da verdade:** `tokens/tokens.json`. O `src/tokens.css` é **gerado** (`npm run tokens:build`); nunca editar à mão.
 - Todo valor visual vem de token. Nada de cor, tamanho ou fonte solto em componente.
-- Tema claro **e** escuro desenhados (escuro por camadas de elevação), respeitando `prefers-color-scheme`.
+- Tema claro **e** escuro desenhados (escuro por camadas de elevação), com **claro como padrão sempre**: abre claro mesmo que o sistema esteja no escuro; o escuro só aparece se a pessoa escolher (`data-theme="dark"`), sem seguir `prefers-color-scheme`.
 - **Contraste medido por programa** (`npm run contrast`), mínimo AA (4,5:1 texto; 3:1 foco e borda de campo). Falhou = corrigir a cor, não afrouxar o teste.
 - Fontes e assets **auto-hospedados** (sem CDN que exponha o IP do visitante). Fontes: **Plus Jakarta Sans** (texto, desde a v0.2.0) e **IBM Plex Mono** (código e identificadores; valores usam a fonte de texto com `tabular-nums`). A Manrope fica em `fonts/` só para o gerador do logo, só alfabeto latino, em `fonts/` com licença OFL. Plex Mono só tem os pesos 400 e 500.
 - Poucas dependências; cada uma nova é decisão registrada. Hoje: zero.
 - Hairline em vez de sombra pesada; um único botão primário por tela; números com `tabular-nums`.
 - **Qualquer tela:** só os tamanhos de tela dos tokens (`breakpoint-*`) nas regras `@media`, aqui e nos produtos. Conferir celular, tela baixa e PC antes de dizer que está pronto.
+- **Uma seção por tela, sem tela quebrada** (vitrine e produtos): cada seção ocupa a altura da tela e cabe inteira; o que não cabe se ajusta à altura ou vira carrossel para o lado. Vale também no celular e em tela baixa.
+- **Qualquer aparelho, adapta sozinho, sem perder o que importa**: PC, notebook, tablet, Android e iPhone, em pé e deitado, toque e mouse, sem configurar nada. Nenhum elemento importante some: o que não cabe se reorganiza (empilha, carrossel, gaveta, versão compacta), nunca é apagado. Alvo de toque adequado, área segura e fonte ampliada respeitadas, sem rolagem horizontal da página. Ao dizer "pronto", listar o que não foi testado em aparelho real.
+- **Sem repetição por tela**: cada informação aparece uma vez na mesma tela; só título e o texto logo abaixo podem repetir o termo.
 - Dados fictícios sempre.
 
 ## Comandos
