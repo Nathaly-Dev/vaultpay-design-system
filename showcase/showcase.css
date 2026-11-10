@@ -90,3 +90,7 @@ p + .ramp, p + .grid, p + .status-row { margin-top: var(--vp-space-4); }
 .chat-side .vp-segmented { margin-top: auto; }
 .chip-row { display: flex; flex-wrap: wrap; gap: var(--vp-space-2); }
 @media (max-width: 720px) { .chat-demo { grid-template-columns: minmax(0, 1fr); } }
+.stack { display: grid; gap: var(--vp-space-4); }
+.suggestion-grid { display: grid; gap: var(--vp-space-3); grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr)); }
+.suggestion-grid .vp-suggestion { background: var(--vp-surface-0); }
+.drawer-demo { display: grid; align-content: start; gap: var(--vp-space-2); padding: var(--vp-space-6) var(--vp-space-4); }

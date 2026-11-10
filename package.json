@@ -1,6 +1,6 @@
 {
   "name": "@vaultpay/design-system",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "Design system da VaultPay (empresa fictícia): tokens, marca e componentes compartilhados por Assist, Insights e Triage.",
   "license": "MIT",
   "type": "module",

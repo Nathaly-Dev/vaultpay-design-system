@@ -50,6 +50,8 @@ As peças (`components.css`) são classes CSS com o prefixo `vp-` (ex.: `vp-msg`
 
 As fontes (Plus Jakarta Sans e IBM Plex Mono, licença OFL; a Manrope fica só para o gerador do logo) vêm junto e são auto-hospedadas: nada é carregado de CDN. Origem e licenças em [`fonts/README.md`](fonts/README.md).
 
+**Qualquer tela:** os três produtos usam os mesmos tamanhos de tela, definidos nos tokens: celular até `30rem`, tablet até `48rem` e tela baixa até `40rem` de altura (celular deitado, notebook pequeno). Variável CSS não funciona dentro de `@media`, então o produto escreve o valor (`@media (max-width: 48rem)`) e um teste confere que é um dos combinados. As peças já se ajustam sozinhas (ex.: o cartão de sugestão vira uma linha); no celular, o menu vai para uma gaveta (`vp-drawer`, num `<dialog>`).
+
 O tema segue o sistema (`prefers-color-scheme`). Para forçar: `<html data-theme="light">` ou `<html data-theme="dark">`.
 
 ## Vitrine
